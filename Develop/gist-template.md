@@ -83,4 +83,4 @@ For example, in the pattern ([0-9]{3}-?)?, the * quantifier is greedy and matche
 
 ## Author
 
-A short section about the author with a link to the author's GitHub profile (replace with your information and a link to your profile)
+I invite you to learn more about me and explore my other projects on my GitHub profile at https://github.com/vikramadityad/.

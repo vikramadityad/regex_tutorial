@@ -55,16 +55,16 @@ For example, in the pattern [0-9], the character class [0-9] matches any single 
 
 Quantifiers specify how many times a character should appear. For example, we use {3} quantifiers to specify it matches previous token exactly 3 times. In our pattern we have 
 
-  [0-9]{2}   
+     [0-9]{2}   
 
 This means the quantifier {2} has previous token 'Character Class' 
 
-  [0-9] 
+    [0-9] 
 that matches single character in the range between 0 and 9 and to have exactly 2 digits. Similary 
 
-  [0-9]{3} and 
-  [0-9]{4} 
-  
+    [0-9]{3} and 
+    [0-9]{4} 
+    
   means it would have exactly 3 dignts and 4 digits respectively. 
 
 ### Grouping and Capturing
@@ -73,11 +73,11 @@ We employ parentheses () for the purpose of grouping and capturing relevant sect
 
 For example, in the pattern 
 
-^(\(\+[0-9]{2}\))? 
+    ^(\(\+[0-9]{2}\))? 
 
 we are grouping the international prefix 
 
-((\+[0-9]{2})) 
+    ((\+[0-9]{2})) 
 
 but we're not capturing it.
 
@@ -85,15 +85,15 @@ but we're not capturing it.
 
 Bracket expressions 
 
-  [...] 
+    [...] 
   
 allow us to specify a set of characters to match at a particular position. In our pattern, we use 
 
-  [0-9] 
+    [0-9] 
 
 to match any digit and 
   
-  [-\/] 
+     [-\/] 
   
 to match hyphens or slashes.
 
@@ -103,7 +103,7 @@ In general Regex matches as much as possible. For example, the * quantifier matc
 
 For example, in the pattern 
 
-  ([0-9]{3}-?)?, 
+    ([0-9]{3}-?)?, 
   
 the * quantifier is greedy and matches as many digits and hyphens as possible. To make it lazy and match as few characters as possible, we can use *?.
 
@@ -111,7 +111,7 @@ the * quantifier is greedy and matches as many digits and hyphens as possible. T
 
 '\b' is used to specify word boundaries. We can use it to ensure that the phone number is not part of a larger word. For example, 
 
-  \b[0-9]{3}\b 
+    \b[0-9]{3}\b 
   
 matches exactly 3 digits as a whole word.
 

@@ -54,32 +54,66 @@ For example, in the pattern [0-9], the character class [0-9] matches any single 
 ### Quantifiers
 
 Quantifiers specify how many times a character should appear. For example, we use {3} quantifiers to specify it matches previous token exactly 3 times. In our pattern we have 
-      [0-9]{2}   
-This means the quantifier {2} has previous token 'Character Class' [0-9] that matches single character in the range between 0 and 9 and to have exactly 2 digits. 
- Similary [0-9]{3} and [0-9]{4} means it would have exactly 3 dignts and 4 digits respectively. 
+
+  [0-9]{2}   
+
+This means the quantifier {2} has previous token 'Character Class' 
+
+  [0-9] 
+that matches single character in the range between 0 and 9 and to have exactly 2 digits. Similary 
+
+  [0-9]{3} and 
+  [0-9]{4} 
+  
+  means it would have exactly 3 dignts and 4 digits respectively. 
 
 ### Grouping and Capturing
 
 We employ parentheses () for the purpose of grouping and capturing relevant sections within the regex pattern. These grouped sections can later be utilized for additional processing. In our specific regex pattern, we make use of parentheses for grouping purposes; however, it's important to note that we do not explicitly store or capture the content within these groups for subsequent use.
 
-For example, in the pattern ^(\(\+[0-9]{2}\))?, we are grouping the international prefix ((\+[0-9]{2})), but we're not capturing it.
+For example, in the pattern 
+
+^(\(\+[0-9]{2}\))? 
+
+we are grouping the international prefix 
+
+((\+[0-9]{2})) 
+
+but we're not capturing it.
 
 ### Bracket Expressions
 
-Bracket expressions [...] allow us to specify a set of characters to match at a particular position. In our pattern, we use [0-9] to match any digit and [-\/] to match hyphens or slashes.
+Bracket expressions 
 
-[0-9] matches any digit.
-[-\/] matches hyphens or slashes.
+  [...] 
+  
+allow us to specify a set of characters to match at a particular position. In our pattern, we use 
+
+  [0-9] 
+
+to match any digit and 
+  
+  [-\/] 
+  
+to match hyphens or slashes.
 
 ### Greedy and Lazy Match
 
 In general Regex matches as much as possible. For example, the * quantifier matches the maximum number of characters. To make it lazy, we can use *?.
 
-For example, in the pattern ([0-9]{3}-?)?, the * quantifier is greedy and matches as many digits and hyphens as possible. To make it lazy and match as few characters as possible, we can use *?.
+For example, in the pattern 
+
+  ([0-9]{3}-?)?, 
+  
+the * quantifier is greedy and matches as many digits and hyphens as possible. To make it lazy and match as few characters as possible, we can use *?.
 
 ### Boundaries
 
-'\b' is used to specify word boundaries. We can use it to ensure that the phone number is not part of a larger word. For example, \b[0-9]{3}\b matches exactly 3 digits as a whole word.
+'\b' is used to specify word boundaries. We can use it to ensure that the phone number is not part of a larger word. For example, 
+
+  \b[0-9]{3}\b 
+  
+matches exactly 3 digits as a whole word.
 
 ## Author
 
